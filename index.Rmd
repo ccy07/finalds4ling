@@ -57,7 +57,7 @@ output:
 
 # The results
 
-* Three categorical independent variables; one ordered dependent variable (a 7-point Likert scale).
+* Three categorical independent variables; one ordinal dependent variable (a 7-point Likert scale).
 
 * This study used Cumulative Link Mixed Models (or CLMMs), which will test both three fixed effects and random effects.
 
@@ -154,7 +154,7 @@ summary(fm4)
 
 * The model containing Blocking, Identity and dialectual background provided the best fit of the data.
 
-* Blocking (z = -4.182, pr(>|z|) < 0.001), Identity (z = 8.951, pr(>|z|) < 0.001) and dialectual background (z = 16.760, pr(>|z|) < 0.001) all have main effects on the final rating scores.
+* Blocking (z = -4.182, p < 0.001), Identity (z = 8.951, p < 0.001) and dialectual background (z = 16.760, p < 0.001) all have main effects on the final rating scores.
 
   * The sentences without blocking have higher score than the sentences with blocking.
 
