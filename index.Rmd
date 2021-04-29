@@ -164,5 +164,6 @@ summary(fm4)
 
 * The random effect does not have a main effect in this study.
 
+* If we have ordinal dependent variable, the assumption dignostics still work?
 
 
