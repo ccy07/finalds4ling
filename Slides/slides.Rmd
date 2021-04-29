@@ -1,0 +1,133 @@
+---
+title: "The acceptability of two reflexives in one clause: identity, blocking and dialectual variations"
+author: "Chaoyi Chen"
+institute: "Rutgers University"
+date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    css: ["hygge", "rutgers", "rutgers-fonts",]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+# Background
+
+* Chinese has two kinds of reflexives: the simple reflexive *ziji* 'self' and the complex reflexive *ta-ziji* 'him-self'.
+
+* When in a subordinate clause, both *ziji* and *ta-ziji* can refer to the subject in the main clause.
+
+  * *John* thinks that *ziji*/*ta-ziji* is clever.
+  
+* I am curious about the case where two reflxives appears in subordinate clause.  
+
+  * *John* thinks that REF1 (*ziji* or *ta-ziji*) cheats REF2 (*ziji* or *ta-ziji*).
+
+* In particular, I wonder what affect the acceptability of this case. Three factors are considered: 
+
+  * whether or not two reflexives are identical 
+  * whether or not a less specific reflexive precedes a more-specific reflexive (*ziji*-*taziji* vs. other three types; "blocking"hereafter)
+  * dialectual background (northern Chinese speakers and Southern Chinese speakers); 
+
+
+
+
+---
+
+
+# The methods
+
+
+* This is a hypothetical project.
+
+* **Participant:** 100; 50 northern Chinese speakers and 50 southern Chinese speakers
+
+* **Procedure** Participants completed the tests individually and finished the following tasks in order: a consent form (5 mins), a language background questionnaire (5 mins), an acceptability rating task (30 mins).
+
+* **Materials** 4 test sentences in total (one sentences for each type)  
+
+
+* **The task** Participants will judge the acceptability of 20 sentences: 8 practice sentences and 12 non-practice sentences (8 fillers, 4 experimental). Sentence items were presented one at a time which participants rated on a scale from 1 (very bad) to 7 (very good).
+
+
+
+---
+
+# The results
+
+* Three categorical independent variables; one ordered dependent variable (a 7-point Likert scale).
+
+* This study used Cumulative Link Mixed Models (or CLMMs), which will test both three fixed effects and random effects.
+
+* Cumulative Link Mixed Models is for the data with the defendant variable as oridinal.
+---
+# The results--data frame
+
+```{r, 'df', echo=F,warnings=F, message=F}
+df_tidy<- read.csv("~/Desktop/finalds4ling/Data/data_tidy1.csv")
+head(df_tidy)
+```
+---
+# The results--the plot for Blocking
+
+```{r, 'plot1', echo=F,warnings=F, message=F}
+library("tidyverse")
+df_tidy %>%
+   group_by(Blocking) %>%
+   summarise(mean_rating = mean(rating))
+df_tidy %>%
+  ggplot(., aes(x = Blocking, y= rating)) + # set up varibles 
+  geom_boxplot() # make a plot
+```
+
+---
+
+# The results--he plot for Identity
+
+```{r, 'plot2', echo=F,warnings=F, message=F}
+library("tidyverse")
+df_tidy %>%
+   group_by(Identidy) %>%
+   summarise(mean_rating = mean(rating))
+df_tidy %>%
+  ggplot(., aes(x = Identidy, y= rating)) + # set up varibles 
+  geom_boxplot() # make a plot
+
+```
+---
+# The results--the plot for Dialectual background
+
+```{r, 'plot3', echo=F,warnings=F, message=F}
+library("tidyverse")
+df_tidy %>%
+   group_by(dia) %>%
+   summarise(mean_rating = mean(rating))
+df_tidy %>%
+  ggplot(., aes(x = dia, y= rating)) + # set up varibles 
+  geom_boxplot() # make a plot
+```
+---
+# The results--ordered regression models
+
+
+```{r, 'regression', echo=T,warnings=F, message=F}
+library("ordinal")
+fm1 <- clm(as.factor(rating) ~ 1, data = df_tidy)
+fm2 <- clm(as.factor(rating) ~ Blocking, data = df_tidy)
+fm3 <- clm(as.factor(rating) ~ Blocking + Identidy , data = df_tidy)
+fm4 <- clm(as.factor(rating) ~ Blocking + Identidy + dia, data = df_tidy)
+fm5 <- clmm(as.factor(rating) ~ Blocking + Identidy + dia + (1|id), data = df_tidy)
+anova(fm1,fm2,fm3,fm4,fm5)
+```
+
+
+
+---
+
+
+# Conclusion
+
+---
+

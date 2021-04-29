@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>The acceptability of two reflexives in one clause: identity, blocking and dialectual variations</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Chaoyi Chen" />
+    <meta name="date" content="2021-04-28" />
+    <script src="libs/header-attrs-2.7/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/hygge.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/rutgers.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/rutgers-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# The acceptability of two reflexives in one clause: identity, blocking and dialectual variations
+### Chaoyi Chen
+### Rutgers University
+### 2021-04-28
+
+---
+
+
+# Background
+
+* Chinese has two kinds of reflexives: the simple reflexive *ziji* 'self' and the complex reflexive *ta-ziji* 'him-self'.
+
+* When in a subordinate clause, both *ziji* and *ta-ziji* can refer to the subject in the main clause.
+
+  * *John* thinks that *ziji*/*ta-ziji* is clever.
+  
+* I am curious about the case where two reflxives appears in subordinate clause.  
+
+  * *John* thinks that REF1 (*ziji* or *ta-ziji*) cheats REF2 (*ziji* or *ta-ziji*).
+
+* In particular, I wonder what affect the acceptability of this case. Three factors are considered: 
+
+  * whether or not two reflexives are identical 
+  * whether or not a less specific reflexive precedes a more-specific reflexive (*ziji*-*taziji* vs. other three types; "blocking"hereafter)
+  * dialectual background (northern Chinese speakers and Southern Chinese speakers); 
+
+
+
+
+---
+
+
+# The methods
+
+
+* This is a hypothetical project.
+
+* **Participant:** 100; 50 northern Chinese speakers and 50 southern Chinese speakers
+
+* **Procedure** Participants completed the tests individually and finished the following tasks in order: a consent form (5 mins), a language background questionnaire (5 mins), an acceptability rating task (30 mins).
+
+* **Materials** 4 test sentences in total (one sentences for each type)  
+
+
+* **The task** Participants will judge the acceptability of 20 sentences: 8 practice sentences and 12 non-practice sentences (8 fillers, 4 experimental). Sentence items were presented one at a time which participants rated on a scale from 1 (very bad) to 7 (very good).
+
+
+
+---
+
+# The results
+
+* Three categorical independent variables; one ordered dependent variable (a 7-point Likert scale).
+
+* This study used Cumulative Link Mixed Models (or CLMMs), which will test both three fixed effects and random effects.
+
+* Cumulative Link Mixed Models is for the data with the defendant variable as oridinal.
+---
+# The results--data frame
+
+
+```
+##     id dia sentence rating Blocking Identidy
+## 1 S001 nor       s1      1      yes       no
+## 2 S001 nor       s2      1       no       no
+## 3 S001 nor       s3      4       no      yes
+## 4 S001 nor       s4      5       no      yes
+## 5 S002 nor       s1      2      yes       no
+## 6 S002 nor       s2      3       no       no
+```
+---
+# The results--the plot for Blocking
+
+
+```
+## # A tibble: 2 x 2
+##   Blocking mean_rating
+##   &lt;chr&gt;          &lt;dbl&gt;
+## 1 no              4.69
+## 2 yes             3.38
+```
+
+![](slides_files/figure-html/plot1-1.png)&lt;!-- --&gt;
+
+---
+
+# The results--he plot for Identity
+
+
+```
+## # A tibble: 2 x 2
+##   Identidy mean_rating
+##   &lt;chr&gt;          &lt;dbl&gt;
+## 1 no              3.66
+## 2 yes             5.07
+```
+
+![](slides_files/figure-html/plot2-1.png)&lt;!-- --&gt;
+---
+# The results--the plot for Dialectual background
+
+
+```
+## # A tibble: 2 x 2
+##   dia   mean_rating
+##   &lt;chr&gt;       &lt;dbl&gt;
+## 1 nor          2.58
+## 2 sou          6.16
+```
+
+![](slides_files/figure-html/plot3-1.png)&lt;!-- --&gt;
+---
+# The results--ordered regression models
+
+
+
+```r
+library("ordinal")
+fm1 &lt;- clm(as.factor(rating) ~ 1, data = df_tidy)
+fm2 &lt;- clm(as.factor(rating) ~ Blocking, data = df_tidy)
+fm3 &lt;- clm(as.factor(rating) ~ Blocking + Identidy , data = df_tidy)
+fm4 &lt;- clm(as.factor(rating) ~ Blocking + Identidy + dia, data = df_tidy)
+fm5 &lt;- clmm(as.factor(rating) ~ Blocking + Identidy + dia + (1|id), data = df_tidy)
+anova(fm1,fm2,fm3,fm4,fm5)
+```
+
+```
+## Likelihood ratio tests of cumulative link models:
+##  
+##     formula:                                                 link: threshold:
+## fm1 as.factor(rating) ~ 1                                    logit flexible  
+## fm2 as.factor(rating) ~ Blocking                             logit flexible  
+## fm3 as.factor(rating) ~ Blocking + Identidy                  logit flexible  
+## fm4 as.factor(rating) ~ Blocking + Identidy + dia            logit flexible  
+## fm5 as.factor(rating) ~ Blocking + Identidy + dia + (1 | id) logit flexible  
+## 
+##     no.par     AIC  logLik  LR.stat df Pr(&gt;Chisq)    
+## fm1      6 1535.08 -761.54                           
+## fm2      7 1505.39 -745.70  31.6842  1  1.814e-08 ***
+## fm3      8 1485.62 -734.81  21.7677  1  3.077e-06 ***
+## fm4      9  963.44 -472.72 524.1848  1  &lt; 2.2e-16 ***
+## fm5     10  964.16 -472.08   1.2834  1     0.2573    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+
+
+
+---
+
+
+# Conclusion
+
+---
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
