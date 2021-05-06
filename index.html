@@ -4,7 +4,7 @@
     <title>The acceptability of two reflexives in one clause: identity, blocking and dialectual variations</title>
     <meta charset="utf-8" />
     <meta name="author" content="Chaoyi Chen" />
-    <meta name="date" content="2021-04-29" />
+    <meta name="date" content="2021-05-05" />
     <script src="libs/header-attrs-2.7/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/hygge.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/rutgers.css" rel="stylesheet" />
@@ -17,7 +17,7 @@ class: center, middle, inverse, title-slide
 # The acceptability of two reflexives in one clause: identity, blocking and dialectual variations
 ### Chaoyi Chen
 ### Rutgers University
-### 2021-04-29
+### 2021-05-05
 
 ---
 
@@ -173,32 +173,39 @@ anova(fm1,fm2,fm3,fm4,fm5)
 # The best model
 
 ```r
-summary(fm4)
+summary(fm5)
 ```
 
 ```
-## formula: as.factor(rating) ~ Blocking + Identidy + dia
+## Cumulative Link Mixed Model fitted with the Laplace approximation
+## 
+## formula: as.factor(rating) ~ Blocking + Identidy + dia + (1 | id)
 ## data:    df_tidy
 ## 
-##  link  threshold nobs logLik  AIC    niter max.grad cond.H 
-##  logit flexible  400  -472.72 963.44 6(0)  3.81e-12 5.4e+01
+##  link  threshold nobs logLik  AIC    niter     max.grad cond.H 
+##  logit flexible  400  -472.08 964.16 778(1570) 9.36e-05 6.4e+01
+## 
+## Random effects:
+##  Groups Name        Variance Std.Dev.
+##  id     (Intercept) 0.1891   0.4349  
+## Number of groups:  id 100 
 ## 
 ## Coefficients:
 ##             Estimate Std. Error z value Pr(&gt;|z|)    
-## Blockingyes  -1.1377     0.2721  -4.182  2.9e-05 ***
-## Identidyyes   2.2828     0.2551   8.951  &lt; 2e-16 ***
-## diasou        6.3674     0.3799  16.760  &lt; 2e-16 ***
+## Blockingyes  -1.1762     0.2762  -4.259 2.05e-05 ***
+## Identidyyes   2.3682     0.2687   8.814  &lt; 2e-16 ***
+## diasou        6.5754     0.4385  14.994  &lt; 2e-16 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
 ## Threshold coefficients:
 ##     Estimate Std. Error z value
-## 1|2  -0.6453     0.2392  -2.698
-## 2|3   1.0018     0.2353   4.257
-## 3|4   2.4709     0.2671   9.251
-## 4|5   3.9868     0.3270  12.193
-## 5|6   5.4771     0.3886  14.096
-## 6|7   7.3709     0.4547  16.209
+## 1|2  -0.6642     0.2504  -2.653
+## 2|3   1.0492     0.2492   4.211
+## 3|4   2.5677     0.2907   8.833
+## 4|5   4.1233     0.3586  11.498
+## 5|6   5.6567     0.4312  13.118
+## 6|7   7.6150     0.5164  14.746
 ```
 
 ---

@@ -4,7 +4,7 @@
 %
 \documentclass[
   english,
-  man]{apa6}
+  man,floatsintext]{apa6}
 \usepackage{lmodern}
 \usepackage{amsmath}
 \usepackage{ifxetex,ifluatex}
@@ -126,15 +126,11 @@
   {\section*{\protect\normalfont{\@title}}}
   {}{\typeout{Failed to patch title.}}
 \makeatother
-\shorttitle{SHORTTITLE}
+\shorttitle{The acceptability of two reflexives in one clause}
 \keywords{keywords\newline\indent Word count: X}
-\DeclareDelayedFloatFlavor{ThreePartTable}{table}
-\DeclareDelayedFloatFlavor{lltable}{table}
-\DeclareDelayedFloatFlavor*{longtable}{table}
-\makeatletter
-\renewcommand{\efloat@iwrite}[1]{\immediate\expandafter\protected@write\csname efloat@post#1\endcsname{}}
-\makeatother
 \usepackage{csquotes}
+\usepackage{float}
+\floatplacement{figure}{H}
 \ifxetex
   % Load polyglossia as late as possible: uses bidi with RTL langages (e.g. Hebrew, Arabic)
   \usepackage{polyglossia}
@@ -173,51 +169,195 @@
 
 \affiliation{\vspace{0.5cm}\textsuperscript{1} Rutgers University}
 
-\abstract{
-One or two sentences providing a \textbf{basic introduction} to the field, comprehensible to a scientist in any discipline.
-
-Two to three sentences of \textbf{more detailed background}, comprehensible to scientists in related disciplines.
-
-One sentence clearly stating the \textbf{general problem} being addressed by this particular study.
-
-One sentence summarizing the main result (with the words ``\textbf{here we show}'' or their equivalent).
-
-Two or three sentences explaining what the \textbf{main result} reveals in direct comparison to what was thought to be the case previously, or how the main result adds to previous knowledge.
-
-One or two sentences to put the results into a more \textbf{general context}.
-
-Two or three sentences to provide a \textbf{broader perspective}, readily comprehensible to a scientist in any discipline.
-}
-
-
-
 \begin{document}
 \maketitle
 
 \hypertarget{methods}{%
 \section{Methods}\label{methods}}
 
-We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study.
+Mandarin has two kinds of reflexives: the simple reflexive \emph{ziji} `self' and the complex reflexive \emph{ta-ziji} `him-self.' When in a subordinate clause, both \emph{ziji} and \emph{ta-ziji} can refer to the subject in the main clause. For example, in the sentence `\emph{John} thinks that \emph{ziji}/\emph{ta-ziji} is clever,' both \emph{ziji} and \emph{ta-ziji}' are able to refer to the matrix subject \emph{John} . This paper examines the case where two reflxives appears in subordinate clause and explores the factors affecting the acceptability of the sentence. In the sentence `\emph{John} thinks that REF1 cheats REF2.' REF1 and REF2 can be occupied by either \emph{ziji} or \emph{ta-ziji}, thus four possibilities are generated: \emph{ziji}-\emph{ziji}, \emph{ta-ziji}-\emph{ta-ziji}, \emph{ziji}-\emph{ta-ziji} and \emph{ta-ziji}-\emph{ziji}. On top of these four cases, three factors of theoretical interests are considered in this study: (i) whether or not two reflexives are identical; (ii) whether or not a less specific reflexive precedes a more-specific reflexive (\emph{ziji}-\emph{taziji} vs the other three cases; I called the cases of a less specific reflexive preceding a more-specific reflexive as blocking hereafter); (iii) whether or not the speaker is a northern Chinese speaker. This is a hypothetical project and the data was stimulated by the package faux.
 
-\hypertarget{participants}{%
-\subsection{Participants}\label{participants}}
+\hypertarget{participant}{%
+\subsection{Participant}\label{participant}}
 
-\hypertarget{material}{%
-\subsection{Material}\label{material}}
+This study recruited a total of 100 participants, among which 50 participant are northern Mandarin speakers and 50 participants are southern Mandarin spekaers (non-northern Mandarin speakers). Their northern/southern identities are defined in term of the dialects they speak. Participants were screened such that their age were greater than 18 years old.
 
 \hypertarget{procedure}{%
 \subsection{Procedure}\label{procedure}}
 
-\hypertarget{data-analysis}{%
-\subsection{Data analysis}\label{data-analysis}}
+Participants completed the tests individually and finished the following tasks in order: a consent form (5 mins), a language background questionnaire (5 mins), an acceptability rating task (25 mins).
 
-We used R (Version 4.0.5; R Core Team, 2021) and the R-packages \emph{papaja} (Version 0.1.0.9997; Aust \& Barth, 2020), and \emph{tinylabels} (Version 0.2.1; Barth, 2021) for all our analyses.
+\hypertarget{language-background-questionnaire}{%
+\subsection{Language background questionnaire}\label{language-background-questionnaire}}
+
+It was administered in the participants' L1 and contained questions about the dialect(s) they speak, the age of acquisition of Mandarin, knowledge of other languages, and language experience and use.
+
+\hypertarget{materials}{%
+\subsection{Materials}\label{materials}}
+
+This study tested four sentences in total. These four sentences is framed as \emph{Zhangsan} thinks that REF1 cheats REF2. These four sentences for test instantiate the four possibilities of reflexive combinations: \emph{ziji}-\emph{ziji}, \emph{ta-ziji}-\emph{ta-ziji}, \emph{ziji}-\emph{ta-ziji} and \emph{ta-ziji}-\emph{ziji}. For the identity parameter, \emph{ziji}-\emph{ziji}, \emph{ta-ziji}-\emph{ta-ziji} are labelled as yes and \emph{ziji}-\emph{ta-ziji} and \emph{ta-ziji}-\emph{ziji} are labelled as no. For the blocking parameter, \emph{ziji}-\emph{ziji}, \emph{ta-ziji}-\emph{ta-ziji}and \emph{ta-ziji}-\emph{ziji} are labelled as yes while \emph{ziji}-\emph{ta-ziji} is labelled as no.
+
+\hypertarget{the-acceptability-rating-task}{%
+\subsection{The acceptability rating task}\label{the-acceptability-rating-task}}
+
+This experiment was an acceptability rating task administered online using XX, a data collecting website. Sentence items were presented one at a time which participants rated on a scale from 1 (very bad) to 7 (very good) intuitively as a formal measure
+of linguistic acceptability. The Likert scales have been widely used in psychological research (Likert 1932; Hartley 2014) as well as judgment replication studies. Participants were required to judge the acceptability of 20 sentences: 8 practice sentences and 12 non-practice sentences (8 fillers, 4 experimental). A one-minute break was placed after the first ten sentences are rated. The practice sentences served to familiarize subjects with the task and 7-point rating system. The order of items presented in the experiment was randomized.
 
 \hypertarget{results}{%
 \section{Results}\label{results}}
 
-\hypertarget{discussion}{%
-\section{Discussion}\label{discussion}}
+\hypertarget{data-summary}{%
+\subsection{Data summary}\label{data-summary}}
+
+We obtained 400 observations in total from 100 participants and each participant rated on each of the four test sentences. The sentence of four combinations \emph{ziji}-\emph{ta-ziji}, \emph{ta-ziji}-\emph{ziji}, \emph{ziji}-\emph{ziji} and \emph{ta-ziji}-\emph{ta-ziji} were marked as ``s1,''``s2,''``s3'' and ``s4'' respectively in the raw data and their identity and blocking properties were added to the data frame after the experiment (a part of data cleaning). The tidy dataframe is shown below. The participant from S001 to S050 are northern Chinese speakers and the participant from S051-S100 are southern Chinese speakers.
+
+\begin{table}
+
+\caption{\label{tab:df}Table 1}
+\centering
+\begin{tabular}[t]{l|l|l|r|l|l}
+\hline
+id & dia & sentence & rating & Blocking & Identidy\\
+\hline
+S001 & nor & s1 & 1 & yes & no\\
+\hline
+S001 & nor & s2 & 1 & no & no\\
+\hline
+S001 & nor & s3 & 4 & no & yes\\
+\hline
+S001 & nor & s4 & 5 & no & yes\\
+\hline
+S002 & nor & s1 & 2 & yes & no\\
+\hline
+S002 & nor & s2 & 3 & no & no\\
+\hline
+\end{tabular}
+\end{table}
+
+\hypertarget{descriptive-statistics}{%
+\subsection{Descriptive statistics}\label{descriptive-statistics}}
+
+The descriptive statistics of acceptability ratings (mean, standard deviation(SD) and the number of ovservations) for the four sentences are shown in the table below. The acceptability ratings on blocking, Identity and dialectual background are presented in Fig.1, Fig.2 and Fig.3 respectively.
+
+\begin{table}
+
+\centering
+\begin{tabular}[t]{l|l|l|r}
+\hline
+Blocking & mean & SD & N\\
+\hline
+no & 4.693 & 2.033 & 300\\
+\hline
+yes & 3.38 & 2.206 & 100\\
+\hline
+\end{tabular}
+\centering
+\begin{tabular}[t]{l|l|l|r}
+\hline
+Identidy & mean & SD & N\\
+\hline
+no & 3.66 & 2.151 & 200\\
+\hline
+yes & 5.07 & 1.911 & 200\\
+\hline
+\end{tabular}
+\centering
+\begin{tabular}[t]{l|l|l|r}
+\hline
+dia & mean & SD & N\\
+\hline
+nor & 2.575 & 1.328 & 200\\
+\hline
+sou & 6.155 & 1.037 & 200\\
+\hline
+\end{tabular}
+\end{table}
+
+The overall pattern suggests that the sentences without blocking (mean = 4.69; SD = 2.03) have higher scores than the sentences with blocking (mean = 3.38; SD = 2.21); the sentences with identical reflexives (mean = 5.07; SD = 1.91) have higher scores than the sentences with different reflexives (mean = 3.66; SD = 2.15); the acceptability rating of the sentences in question is lower for northern Mandarin speakers (mean = 2.58; SD = 1.33) than southern Mandarin speakers (mean = 6.16; SD = 1.04).
+
+\begin{figure}
+
+{\centering \includegraphics{manuscript_files/figure-latex/plot11-1} 
+
+}
+
+\caption{The ratings of blocking and non-blocking sentences}\label{fig:plot11}
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics{manuscript_files/figure-latex/plot12-1} 
+
+}
+
+\caption{The ratings of identical and non-identical sentences}\label{fig:plot12}
+\end{figure}
+\begin{figure}
+
+{\centering \includegraphics{manuscript_files/figure-latex/plot13-1} 
+
+}
+
+\caption{The ratings from northern and northern participants}\label{fig:plot13}
+\end{figure}
+
+The ratings by individuals are presened in Fig 4. The participants S001-S050, who are northern Mandarin speakers (the left side of the table) have lower ratings on every sentence with two reflexives than the participants S051-S100, who are southern Mandarin speakers (the right side of the table).
+
+\begin{figure}
+
+{\centering \includegraphics{manuscript_files/figure-latex/plot14-1} 
+
+}
+
+\caption{Individual Ratings from northern and northern participants}\label{fig:plot14}
+\end{figure}
+
+\hypertarget{cumulative-link-mixed-model}{%
+\subsection{Cumulative link mixed model}\label{cumulative-link-mixed-model}}
+
+Due to the ordinal nature of the outcome variable, this study used cumulative link mixed model (CLMM) to analyze the rating score data, and experiment-wise alpha was set at 0.05. The categorical fixed effect group was dummy coded with no (for Identity), yes (for Identity) and northern speaker (for dialectual background) set as the baseline. The random effects structure only included by-subject random intercepts because the predictors are independent from each other. A total of five models are fitted : fm1 (only including intercept), fm2 (including the predicter Blocking), fm3 (including the predicter Blocking and Identity), fm4 (including the predicter Blocking, Identity and dialectual background) and fm5 (including the predicter Blocking, Identity and dialectual background as fixed effects and the ramdon effects of subject). The comparison of these five models are given below. We are not confident enough to conclude that the random effect of participants does not show a main effect in this study (p = 0.2573 \textgreater{} 0.05).
+
+\begin{tabular}{l|r|r|r|r|r|r}
+\hline
+  & no.par & AIC & logLik & LR.stat & df & Pr(>Chisq)\\
+\hline
+fm1 & 6 & 1535.0751 & -761.5375 & NA & NA & NA\\
+\hline
+fm2 & 7 & 1505.3909 & -745.6955 & 31.684165 & 1 & 0.0000000\\
+\hline
+fm3 & 8 & 1485.6232 & -734.8116 & 21.767694 & 1 & 0.0000031\\
+\hline
+fm4 & 9 & 963.4384 & -472.7192 & 524.184788 & 1 & 0.0000000\\
+\hline
+fm5 & 10 & 964.1550 & -472.0775 & 1.283402 & 1 & 0.2572674\\
+\hline
+\end{tabular}
+
+As a result, the model containing Blocking, Identity and dialectual background (fm4) had the lowest AIC value (1485.6232) and thus provided the best fit of the data as shown in the table below. Blocking (z = -4.182, p \textless{} 0.001), Identity (z = 8.951, p \textless{} 0.001) and dialectual background (z = 16.760, p \textless{} 0.001) all have main effects on the final rating scores.
+
+\begin{tabular}{l|r|r|r|r|l}
+\hline
+term & estimate & std.error & statistic & p.value & coef.type\\
+\hline
+1|2 & -0.6452658 & 0.2391530 & -2.698129 & 0.0069730 & intercept\\
+\hline
+2|3 & 1.0018462 & 0.2353392 & 4.257032 & 0.0000207 & intercept\\
+\hline
+3|4 & 2.4709164 & 0.2670916 & 9.251195 & 0.0000000 & intercept\\
+\hline
+4|5 & 3.9867945 & 0.3269683 & 12.193213 & 0.0000000 & intercept\\
+\hline
+5|6 & 5.4770504 & 0.3885505 & 14.096111 & 0.0000000 & intercept\\
+\hline
+6|7 & 7.3708879 & 0.4547319 & 16.209304 & 0.0000000 & intercept\\
+\hline
+Blockingyes & -1.1377389 & 0.2720872 & -4.181523 & 0.0000290 & location\\
+\hline
+Identidyyes & 2.2828352 & 0.2550504 & 8.950525 & 0.0000000 & location\\
+\hline
+diasou & 6.3673600 & 0.3799175 & 16.759849 & 0.0000000 & location\\
+\hline
+\end{tabular}
 
 \newpage
 
@@ -230,11 +370,11 @@ We used R (Version 4.0.5; R Core Team, 2021) and the R-packages \emph{papaja} (V
 
 \hypertarget{refs}{}
 \begin{CSLReferences}{1}{0}
-\leavevmode\hypertarget{ref-R-papaja}{}%
-Aust, F., \& Barth, M. (2020). \emph{{papaja}: {Prepare} reproducible {APA} journal articles with {R Markdown}}. Retrieved from \url{https://github.com/crsh/papaja}
+\leavevmode\hypertarget{ref-hartley2014some}{}%
+Hartley, J. (2014). Some thoughts on likert-type scales. \emph{International Journal of Clinical and Health Psychology}, \emph{14}(1), 83--86.
 
-\leavevmode\hypertarget{ref-R-tinylabels}{}%
-Barth, M. (2021). \emph{{tinylabels}: Lightweight variable labels}. Retrieved from \url{https://github.com/mariusbarth/tinylabels}
+\leavevmode\hypertarget{ref-likert1932technique}{}%
+Likert, R. (1932). A technique for the measurement of attitudes. \emph{Archives of Psychology}.
 
 \leavevmode\hypertarget{ref-R-base}{}%
 R Core Team. (2021). \emph{R: A language and environment for statistical computing}. Vienna, Austria: R Foundation for Statistical Computing. Retrieved from \url{https://www.R-project.org/}

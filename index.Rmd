@@ -144,7 +144,7 @@ anova(fm1,fm2,fm3,fm4,fm5)
 ---
 # The best model
 ```{r, 'regression2', echo=T,warnings=F, message=F}
-summary(fm4)
+summary(fm5)
 ```
 
 ---
@@ -160,7 +160,7 @@ summary(fm4)
 
   * The sentences with identical reflexives have higher score than the sentences with different reflexives.
 
-  * The acceptability rating of the sentences in question is lower for Northern speakers than  southern speakers.
+  * The acceptability rating of the sentences in question is lower for Northern speakers than southern speakers.
 
 * The random effect does not have a main effect in this study.
 

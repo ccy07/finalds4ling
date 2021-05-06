@@ -1,49 +1,37 @@
 ---
 title             : "The acceptability of two reflexives in one clause: identity, blocking and dialectual variations"
-
+shorttitle        : "The acceptability of two reflexives in one clause"
 author: 
   - name          : "Chaoyi Chen"
 affiliation:
   - id            : "1"
     institution   : "Rutgers University"
-
-
-
-
-abstract: |
-  One or two sentences providing a **basic introduction** to the field,  comprehensible to a scientist in any discipline.
-  
-  Two to three sentences of **more detailed background**, comprehensible  to scientists in related disciplines.
-  
-  One sentence clearly stating the **general problem** being addressed by  this particular study.
-  
-  One sentence summarizing the main result (with the words "**here we show**" or their equivalent).
-  
-  Two or three sentences explaining what the **main result** reveals in direct comparison to what was thought to be the case previously, or how the  main result adds to previous knowledge.
-  
-  One or two sentences to put the results into a more **general context**.
-  
-  Two or three sentences to provide a **broader perspective**, readily comprehensible to a scientist in any discipline.
-  
-  <!-- https://tinyurl.com/ybremelq -->
   
 keywords          : "keywords"
 wordcount         : "X"
 
 bibliography      : ["r-references.bib"]
 
-floatsintext      : no
+floatsintext      : yes
 figurelist        : no
 tablelist         : no
 footnotelist      : no
 linenumbers       : no
 mask              : no
 draft             : no
-
+nocite            : |
+  @likert1932technique, @hartley2014some, @R-base
 documentclass     : "apa6"
 classoption       : "man"
 output            : papaja::apa6_pdf
+header-includes: 
+- \usepackage{float}
+- \floatplacement{figure}{H}
+
+
 ---
+
+
 
 ```{r setup, include = FALSE}
 library("papaja")
@@ -52,33 +40,140 @@ r_refs("r-references.bib")
 
 
 
-
-
 # Methods
-We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. <!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) -->
+Mandarin has two kinds of reflexives: the simple reflexive *ziji* 'self' and the complex reflexive *ta-ziji* 'him-self'. When in a subordinate clause, both *ziji* and *ta-ziji* can refer to the subject in the main clause. For example, in the sentence '*John* thinks that *ziji*/*ta-ziji* is clever', both *ziji* and *ta-ziji*' are able to refer to the matrix subject *John* . This paper examines the case where two reflxives appears in subordinate clause and explores the factors affecting the acceptability of the sentence. In the sentence '*John* thinks that REF1 cheats REF2.', REF1 and REF2 can be occupied by either *ziji* or *ta-ziji*, thus four possibilities are generated: *ziji*-*ziji*, *ta-ziji*-*ta-ziji*, *ziji*-*ta-ziji* and *ta-ziji*-*ziji*. On top of these four cases, three factors of theoretical interests are considered in this study: (i)  whether or not two reflexives are identical; (ii) whether or not a less specific reflexive precedes a more-specific reflexive (*ziji*-*taziji* vs the other three cases; I called the cases of a less specific reflexive preceding a more-specific reflexive as blocking hereafter); (iii) whether or not the speaker is a northern Chinese speaker. This is a hypothetical project and the data was stimulated by the package faux.
 
-## Participants
+## Participant  
+This study recruited a total of 100 participants, among which 50 participant are northern Mandarin speakers and 50 participants are southern Mandarin spekaers (non-northern Mandarin speakers). Their northern/southern identities are defined in term of the dialects they speak. Participants were screened such that their age were greater than 18 years old. 
 
-## Material
+## Procedure  
+Participants completed the tests individually and finished the following tasks in order: a consent form (5 mins), a language background questionnaire (5 mins), an acceptability rating task (25 mins).
 
-## Procedure
+## Language background questionnaire
 
-## Data analysis
-We used `r cite_r("r-references.bib")` for all our analyses.
+It was administered in the participants’ L1 and contained questions about the dialect(s) they speak, the age of acquisition of Mandarin, knowledge of other languages, and language experience and use.
+
+
+## Materials 
+
+This study tested four sentences in total. These four sentences is framed as *Zhangsan* thinks that REF1 cheats REF2. These four sentences for test instantiate the four possibilities of reflexive combinations: *ziji*-*ziji*, *ta-ziji*-*ta-ziji*, *ziji*-*ta-ziji* and *ta-ziji*-*ziji*. For the identity parameter, *ziji*-*ziji*, *ta-ziji*-*ta-ziji* are labelled as yes and *ziji*-*ta-ziji* and *ta-ziji*-*ziji* are labelled as no. For the blocking parameter, *ziji*-*ziji*, *ta-ziji*-*ta-ziji*and *ta-ziji*-*ziji* are labelled as yes while *ziji*-*ta-ziji* is labelled as no. 
+
+
+## The acceptability rating task
+
+
+This experiment was an acceptability rating task administered online using XX, a data collecting website. Sentence items were presented one at a time which participants rated on a scale from 1 (very bad) to 7 (very good) intuitively as a formal measure
+of linguistic acceptability. The Likert scales have been widely used in psychological research (Likert 1932; Hartley 2014) as well as judgment replication studies. Participants were required to judge the acceptability of 20 sentences: 8 practice sentences and 12 non-practice sentences (8 fillers, 4 experimental). A one-minute break was placed after the first ten sentences are rated. The practice sentences served to familiarize subjects with the task and 7-point rating system. The order of items presented in the experiment was randomized.
+
+
 
 
 # Results
 
-# Discussion
+## Data summary
+
+We obtained 400 observations in total from 100 participants and each participant rated on each of the four test sentences. The sentence of four combinations *ziji*-*ta-ziji*, *ta-ziji*-*ziji*, *ziji*-*ziji* and *ta-ziji*-*ta-ziji* were marked as "s1","s2","s3" and "s4" respectively in the raw data and their identity and blocking properties were added to the data frame after the experiment (a part of data cleaning). The tidy dataframe is shown below. The participant from S001 to S050 are northern Chinese speakers and the participant from S051-S100 are southern Chinese speakers. 
+
+```{r, 'df', echo=F,warnings=F, message=F, table.align='center'}
+library("tidyverse")
+library(kableExtra)
+df_tidy<- read.csv("~/Desktop/finalds4ling/Data/data_tidy1.csv")
+knitr::kable(head(df_tidy), caption = 'Table 1') %>%
+  kable_styling(bootstrap_options = "striped", full_width = F)
+```
+## Descriptive statistics
+The descriptive statistics of acceptability ratings (mean, standard deviation(SD) and the number of ovservations) for the four sentences are shown in the table below. The acceptability ratings on blocking, Identity and dialectual background are presented in Fig.1, Fig.2 and Fig.3 respectively.
+```{r, 'sum', echo=F,warnings=F, message=F, fig.cap= 'The data frame'}
+d1 <- df_tidy %>%
+   group_by(Blocking) %>%
+   summarise(mean = formatC(mean(rating)),
+             SD = formatC(sd(rating)),
+             N = n())
+d2 <- df_tidy %>%
+   group_by(Identidy) %>%
+   summarise(mean = formatC(mean(rating)),
+             SD = formatC(sd(rating)),
+             N = n()) 
+d3 <- df_tidy %>%
+   group_by(dia) %>%
+   summarise(mean = formatC(mean(rating)),
+             SD = formatC(sd(rating)),
+             N = n())
+knitr::kable(list(d1, d2, d3)) %>%
+  kable_styling(bootstrap_options = "striped", full_width = F)
+```
+The overall pattern suggests that the sentences without blocking (mean = 4.69; SD = 2.03) have higher scores than the sentences with blocking (mean = 3.38; SD = 2.21); the sentences with identical reflexives (mean = 5.07; SD = 1.91) have higher scores than the sentences with different reflexives (mean = 3.66; SD = 2.15); the acceptability rating of the sentences in question is lower for northern Mandarin speakers (mean = 2.58; SD = 1.33) than southern Mandarin speakers (mean = 6.16; SD = 1.04). 
+```{r, 'plot11', echo=F,warnings=F, message=F,fig.width = 4, fig.height=3,fig.align='center', fig.cap= 'The ratings of blocking and non-blocking sentences'}
+library("tidyverse")
+   df_tidy %>%
+  ggplot(., aes(x = Blocking, y= rating)) + # set up varibles 
+  geom_violin() + # make a plot 
+  stat_summary(mapping = aes(x = Blocking, y = rating),fun.min = min, fun.max = max, fun = median) +
+  labs(x = "Blocking", y = "Ratings", title = "") +
+  theme_grey(base_family = "Times", base_size = 10)
+```
+
+```{r, 'plot12', echo=F,warnings=F, message=F,fig.width = 4, fig.height=3, fig.align ='center', fig.cap = 'The ratings of identical and non-identical sentences'}
+library("tidyverse")
+df_tidy %>%
+  ggplot(., aes(x = Identidy, y= rating)) + # set up varibles 
+  geom_violin() + # make a plot
+  stat_summary(mapping = aes(x = Identidy, y = rating),fun.min = min, fun.max = max, fun = median) +
+  labs(x = "Identidy", y = "Ratings") +
+  theme_grey(base_family = "Times", base_size = 10)
+```
+```{r, 'plot13', echo=F,warnings=F, message=F,fig.width = 4,fig.height=3, fig.align='center', fig.cap = 'The ratings from northern and northern participants'}
+df_tidy %>%
+  ggplot(., aes(x = dia, y= rating)) + # set up varibles 
+  geom_violin() + 
+  stat_summary(mapping = aes(x = dia, y = rating),fun.min = min, fun.max = max, fun = median) + # make a plot
+  labs(x = "Dialectual background", y = "Ratings") +
+  theme_grey(base_family = "Times", base_size = 10)
+```
+The ratings by individuals are presened in Fig 4. The participants S001-S050, who are northern Mandarin speakers (the left side of the table) have lower ratings on every sentence with two reflexives than the participants S051-S100, who are southern Mandarin speakers (the right side of the table).
+
+```{r, 'plot14', echo=F,warnings=F, message=F,fig.width = 4.5, fig.height=4, fig.cap = 'Individual Ratings from northern and northern participants', fig.align='center'}
+df_tidy %>%
+  ggplot(aes(x = id, y = rating, fill = id)) +
+  geom_boxplot() +
+  labs(x = "Paticipants", y = "Ratings") +
+  theme_grey(base_family = "Times", base_size = 10) +
+  theme(legend.position = "none") +
+  theme(plot.title = element_text(hjust = -0.2))
+```
+
+## Cumulative link mixed model
+
+Due to the ordinal nature of the outcome variable, this study used cumulative link mixed model (CLMM) to analyze the rating score data, and experiment-wise alpha was set at 0.05. The categorical fixed effect group was dummy coded with no (for Identity), yes (for Identity) and northern speaker (for dialectual background) set as the baseline. The random effects structure only included by-subject random intercepts because the predictors are independent from each other. A total of five models are fitted : fm1 (only including intercept), fm2 (including the predicter Blocking), fm3 (including the predicter Blocking and Identity), fm4 (including the predicter Blocking, Identity and dialectual background) and fm5 (including the predicter Blocking, Identity and dialectual background as fixed effects and the ramdon effects of subject). The comparison of these five models are given below. We are not confident enough to conclude that the random effect of participants does not show a main effect in this study (p = 0.2573 > 0.05).
+
+```{r, 'regression', echo=F,warnings=F, message=F}
+library("ordinal")
+fm1 <- clm(as.factor(rating) ~ 1, data = df_tidy)
+fm2 <- clm(as.factor(rating) ~ Blocking, data = df_tidy)
+fm3 <- clm(as.factor(rating) ~ Blocking + Identidy , data = df_tidy)
+fm4 <- clm(as.factor(rating) ~ Blocking + Identidy + dia, data = df_tidy)
+fm5 <- clmm(as.factor(rating) ~ Blocking + Identidy + dia + (1|id), data = df_tidy)
+knitr::kable(anova(fm1,fm2,fm3,fm4,fm5))
+```
+
+As a result, the model containing Blocking, Identity and dialectual background (fm4) had the lowest AIC value (1485.6232) and thus provided the best fit of the data as shown in the table below. Blocking (z = -4.182, p < 0.001), Identity (z = 8.951, p < 0.001) and dialectual background (z = 16.760, p < 0.001) all have main effects on the final rating scores.  
+
+
+```{r, 'regression1', echo=F,warnings=F, message=F}
+library(broom)
+tidy(fm4) %>%
+  knitr::kable()
+```
 
 
 \newpage
 
 # References
-
+```{r create_r-references}
+r_refs(file = "r-references.bib")
+```
 \begingroup
 \setlength{\parindent}{-0.5in}
 \setlength{\leftskip}{0.5in}
-
 <div id="refs" custom-style="Bibliography"></div>
 \endgroup

@@ -1,0 +1,40 @@
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+
+{\centering \includegraphics{manuscript_files/figure-latex/plot11-1}
+
+}
+
+\caption{The ratings of blocking and non-blocking sentences}\label{fig:plot11}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+
+{\centering \includegraphics{manuscript_files/figure-latex/plot12-1}
+
+}
+
+\caption{The ratings of identical and non-identical sentences}\label{fig:plot12}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+
+{\centering \includegraphics{manuscript_files/figure-latex/plot13-1}
+
+}
+
+\caption{The ratings from northern and northern participants}\label{fig:plot13}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+
+{\centering \includegraphics{manuscript_files/figure-latex/plot14-1}
+
+}
+
+\caption{Individual Ratings from northern and northern participants}\label{fig:plot14}
+\end{figure*}
