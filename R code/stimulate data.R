@@ -4,9 +4,12 @@ library(lme4)
 library(broom.mixed)
 library(faux)
 
+# setting between and within variables
 between <- list(dia = c(nor = "northern", 
                         sou = "southern"))
 within <- list(con = c("s1", "s2", "s3", "s4"))
+
+# generating data
 df <- sim_design(within, between, 
                  n = 50, mu = 1:8, sd = 1)
 round_df <- function(df, digits) {
@@ -17,6 +20,7 @@ round_df <- function(df, digits) {
   (df)
 }
 
+# transforming any values that are lower than 1 to 1 andany values that are larger than 7 to 7
 
 df$s1[df$s1> 7] <- df$s1[df$s1 > 7] * 0 + 7 
 df$s2[df$s2> 7] <- df$s2[df$s2 > 7] * 0 + 7 
