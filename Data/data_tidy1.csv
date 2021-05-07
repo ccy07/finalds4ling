@@ -1,4 +1,4 @@
-id,dia,sentence,rating,Blocking,Identidy
+id,dia,sentence,rating,Blocking,Identity
 S001,nor,s1,1,yes,no
 S001,nor,s2,1,no,no
 S001,nor,s3,4,no,yes

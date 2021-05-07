@@ -90,7 +90,7 @@ d1 <- df_tidy %>%
              SD = formatC(sd(rating)),
              N = n())
 d2 <- df_tidy %>%
-   group_by(Identidy) %>%
+   group_by(Identity) %>%
    summarise(mean = formatC(mean(rating)),
              SD = formatC(sd(rating)),
              N = n()) 
@@ -116,10 +116,10 @@ library("tidyverse")
 ```{r, 'plot12', echo=F,warnings=F, message=F,fig.width = 4, fig.height=3, fig.align ='center', fig.cap = 'The ratings of identical and non-identical sentences'}
 library("tidyverse")
 df_tidy %>%
-  ggplot(., aes(x = Identidy, y= rating)) + # set up varibles 
+  ggplot(., aes(x = Identity, y= rating)) + # set up varibles 
   geom_violin() + # make a plot
-  stat_summary(mapping = aes(x = Identidy, y = rating),fun.min = min, fun.max = max, fun = median) +
-  labs(x = "Identidy", y = "Ratings") +
+  stat_summary(mapping = aes(x = Identity, y = rating),fun.min = min, fun.max = max, fun = median) +
+  labs(x = "Identity", y = "Ratings") +
   theme_grey(base_family = "Times", base_size = 10)
 ```
 ```{r, 'plot13', echo=F,warnings=F, message=F,fig.width = 4,fig.height=3, fig.align='center', fig.cap = 'The ratings from northern and northern participants'}
@@ -150,9 +150,9 @@ Due to the ordinal nature of the outcome variable, this study used cumulative li
 library("ordinal")
 fm1 <- clm(as.factor(rating) ~ 1, data = df_tidy)
 fm2 <- clm(as.factor(rating) ~ Blocking, data = df_tidy)
-fm3 <- clm(as.factor(rating) ~ Blocking + Identidy , data = df_tidy)
-fm4 <- clm(as.factor(rating) ~ Blocking + Identidy + dia, data = df_tidy)
-fm5 <- clmm(as.factor(rating) ~ Blocking + Identidy + dia + (1|id), data = df_tidy)
+fm3 <- clm(as.factor(rating) ~ Blocking + Identity , data = df_tidy)
+fm4 <- clm(as.factor(rating) ~ Blocking + Identity + dia, data = df_tidy)
+fm5 <- clmm(as.factor(rating) ~ Blocking + Identity + dia + (1|id), data = df_tidy)
 knitr::kable(anova(fm1,fm2,fm3,fm4,fm5))
 ```
 
