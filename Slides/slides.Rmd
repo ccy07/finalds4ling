@@ -70,44 +70,58 @@ df_tidy<- read.csv("~/Desktop/finalds4ling/Data_tidy_raw/data_tidy1.csv")
 head(df_tidy)
 ```
 ---
-# The results--the plot for Blocking
-
-```{r, 'plot1', echo=F,warnings=F, message=F}
+# The results--Blocking
+.pull-left[
+```{r, 'plot11', echo=F,warnings=F, message=F}
 library("tidyverse")
-df_tidy %>%
-   group_by(Blocking) %>%
-   summarise(mean_rating = mean(rating))
 df_tidy %>%
   ggplot(., aes(x = Blocking, y= rating)) + # set up varibles 
   geom_boxplot() # make a plot
 ```
-
+]
+.pull-right[
+```{r, 'plot12', echo=F,warnings=F, message=F}
+df_tidy %>%
+   group_by(Blocking) %>%
+   summarise(mean_rating = mean(rating))
+```
+]
 ---
 
-# The results--he plot for Identity
-
-```{r, 'plot2', echo=F,warnings=F, message=F}
+# The results--Identity
+.pull-left[
+```{r, 'plot21', echo=F,warnings=F, message=F}
 library("tidyverse")
-df_tidy %>%
-   group_by(Identity) %>%
-   summarise(mean_rating = mean(rating))
 df_tidy %>%
   ggplot(., aes(x = Identity, y= rating)) + # set up varibles 
   geom_boxplot() # make a plot
-
 ```
----
-# The results--the plot for Dialectual background
-
-```{r, 'plot3', echo=F,warnings=F, message=F}
-library("tidyverse")
+]
+.pull-right[
+```{r, 'plot22', echo=F,warnings=F, message=F}
 df_tidy %>%
-   group_by(dia) %>%
+   group_by(Identity) %>%
    summarise(mean_rating = mean(rating))
+```
+]
+---
+# The results--Dialectual background
+.pull-left[
+```{r, 'plot31', echo=F,warnings=F, message=F}
+library("tidyverse")
 df_tidy %>%
   ggplot(., aes(x = dia, y= rating)) + # set up varibles 
   geom_boxplot() # make a plot
 ```
+]
+.pull-right[
+```{r, 'plot32', echo=F,warnings=F, message=F}
+df_tidy %>%
+   group_by(dia) %>%
+   summarise(mean_rating = mean(rating))
+```
+]
+
 ---
 # The results--ordered regression models
 
@@ -121,13 +135,19 @@ fm4 <- clm(as.factor(rating) ~ Blocking + Identity + dia, data = df_tidy)
 fm5 <- clmm(as.factor(rating) ~ Blocking + Identity + dia + (1|id), data = df_tidy)
 anova(fm1,fm2,fm3,fm4,fm5)
 ```
-
-
-
 ---
 
 
 # Conclusion
 
----
+  * The sentences with identical reflexives have higher score than the sentences with different reflexives.
+
+  * The acceptability rating of the sentences in question is lower in Northern speakers than in Northern speakers.
+  * The acceptability rating of the sentences in question is lower for Northern speakers than  southern speakers.
+
+* The random effect does not have a main effect in this study.
+
+* If we have ordinal dependent variable, the assumption diagnostics still work?
+
+
 
