@@ -61,7 +61,7 @@ df_tidy %>%
   theme(plot.title = element_text(hjust = -0.2))
 
 # Cumulative link mixed model
-
+options(scipen = 1, digits = 3)
 fm1 <- clm(as.factor(rating) ~ 1, data = df_tidy)
 fm2 <- clm(as.factor(rating) ~ Blocking, data = df_tidy)
 fm3 <- clm(as.factor(rating) ~ Blocking + Identity , data = df_tidy)

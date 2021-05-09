@@ -66,7 +66,7 @@ output:
 # The results--data frame
 
 ```{r, 'df', echo=F,warnings=F, message=F}
-df_tidy<- read.csv("~/Desktop/finalds4ling/Data/data_tidy1.csv")
+df_tidy<- read.csv("~/Desktop/finalds4ling/Data_tidy_raw/data_tidy1.csv")
 head(df_tidy)
 ```
 ---
@@ -89,10 +89,10 @@ df_tidy %>%
 ```{r, 'plot2', echo=F,warnings=F, message=F}
 library("tidyverse")
 df_tidy %>%
-   group_by(Identidy) %>%
+   group_by(Identity) %>%
    summarise(mean_rating = mean(rating))
 df_tidy %>%
-  ggplot(., aes(x = Identidy, y= rating)) + # set up varibles 
+  ggplot(., aes(x = Identity, y= rating)) + # set up varibles 
   geom_boxplot() # make a plot
 
 ```
@@ -116,9 +116,9 @@ df_tidy %>%
 library("ordinal")
 fm1 <- clm(as.factor(rating) ~ 1, data = df_tidy)
 fm2 <- clm(as.factor(rating) ~ Blocking, data = df_tidy)
-fm3 <- clm(as.factor(rating) ~ Blocking + Identidy , data = df_tidy)
-fm4 <- clm(as.factor(rating) ~ Blocking + Identidy + dia, data = df_tidy)
-fm5 <- clmm(as.factor(rating) ~ Blocking + Identidy + dia + (1|id), data = df_tidy)
+fm3 <- clm(as.factor(rating) ~ Blocking + Identity , data = df_tidy)
+fm4 <- clm(as.factor(rating) ~ Blocking + Identity + dia, data = df_tidy)
+fm5 <- clmm(as.factor(rating) ~ Blocking + Identity + dia + (1|id), data = df_tidy)
 anova(fm1,fm2,fm3,fm4,fm5)
 ```
 

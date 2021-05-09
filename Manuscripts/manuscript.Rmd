@@ -41,30 +41,28 @@ r_refs("r-references.bib")
 
 
 # Methods
-Mandarin has two kinds of reflexives: the simple reflexive *ziji* 'self' and the complex reflexive *ta-ziji* 'him-self'. When in a subordinate clause, both *ziji* and *ta-ziji* can refer to the subject in the main clause. For example, in the sentence '*John* thinks that *ziji*/*ta-ziji* is clever', both *ziji* and *ta-ziji*' are able to refer to the matrix subject *John* . This paper examines the case where two reflxives appears in subordinate clause and explores the factors affecting the acceptability of the sentence. In the sentence '*John* thinks that REF1 cheats REF2.', REF1 and REF2 can be occupied by either *ziji* or *ta-ziji*, thus four possibilities are generated: *ziji*-*ziji*, *ta-ziji*-*ta-ziji*, *ziji*-*ta-ziji* and *ta-ziji*-*ziji*. On top of these four cases, three factors of theoretical interests are considered in this study: (i)  whether or not two reflexives are identical; (ii) whether or not a less specific reflexive precedes a more-specific reflexive (*ziji*-*taziji* vs the other three cases; I called the cases of a less specific reflexive preceding a more-specific reflexive as blocking hereafter); (iii) whether or not the speaker is a northern Chinese speaker. This is a hypothetical project and the data was stimulated by the package faux.
+Mandarin has two kinds of reflexives: the simple reflexive *ziji* 'self' and the complex reflexive *ta-ziji* 'him-self'. When appearing in a subordinate clause, both *ziji* and *ta-ziji* can refer to the subject in the matrix clause. For example, in the sentence '*John* thinks that *ziji*/*ta-ziji* is clever', both *ziji* and *ta-ziji*' are able to refer to the matrix subject *John*. This paper examines the case where two reflexives appears in one subordinate clause and explores the factors affecting the acceptability of the sentence. In the sentence '*John* thinks that REF1 cheats REF2.', REF1 and REF2 can be occupied by either *ziji* or *ta-ziji*, thus four possibilities are generated: *ziji*-*ziji*, *ta-ziji*-*ta-ziji*, *ziji*-*ta-ziji* and *ta-ziji*-*ziji*. On top of these four cases, three factors of theoretical interests are considered in this study: (i)  whether or not two reflexives are identical; (ii) whether or not a less specific reflexive precedes a more specific reflexive (*ziji*-*ta-ziji* vs the other three cases; I called the cases of a less specific reflexive preceding a more specific reflexive as **blocking** hereafter); (iii) whether or not the speaker is a northern Mandarin speaker. This is a hypothetical project and the data were stimulated by the R-package *faux*.
 
-## Participant  
-This study recruited a total of 100 participants, among which 50 participant are northern Mandarin speakers and 50 participants are southern Mandarin spekaers (non-northern Mandarin speakers). Their northern/southern identities are defined in term of the dialects they speak. Participants were screened such that their age were greater than 18 years old. 
+## Participants  
+This study recruited a total of 100 participants, among which 50 participant were northern Mandarin speakers and 50 participants were southern Mandarin speakers (non-northern Mandarin speakers). Their northern/southern identities are defined in term of the dialects they speak. Participants were screened such that their age were greater than 18 years old. 
 
 ## Procedure  
-Participants completed the tests individually and finished the following tasks in order: a consent form (5 mins), a language background questionnaire (5 mins), an acceptability rating task (25 mins).
+Participants completed the tests individually and finished the following tasks in order: a consent form (5 minutes), a language background questionnaire (5 minutes), an acceptability rating task (15 minutes).
 
 ## Language background questionnaire
 
-It was administered in the participants’ L1 and contained questions about the dialect(s) they speak, the age of acquisition of Mandarin, knowledge of other languages, and language experience and use.
+It was administered in the participants’ L1 (Mandarin) and contained the questions about the dialect(s) they speak, the age of acquisition of Mandarin, knowledge of other languages, and language experience and use.
 
 
 ## Materials 
 
-This study tested four sentences in total. These four sentences is framed as *Zhangsan* thinks that REF1 cheats REF2. These four sentences for test instantiate the four possibilities of reflexive combinations: *ziji*-*ziji*, *ta-ziji*-*ta-ziji*, *ziji*-*ta-ziji* and *ta-ziji*-*ziji*. For the identity parameter, *ziji*-*ziji*, *ta-ziji*-*ta-ziji* are labelled as yes and *ziji*-*ta-ziji* and *ta-ziji*-*ziji* are labelled as no. For the blocking parameter, *ziji*-*ziji*, *ta-ziji*-*ta-ziji*and *ta-ziji*-*ziji* are labelled as yes while *ziji*-*ta-ziji* is labelled as no. 
+This study tested four sentences in total. These four sentences is framed as *Zhangsan* thinks that REF1 cheats REF2. The four sentences for test instantiate the four possibilities of reflexive combinations: *ziji*-*ziji*, *ta-ziji*-*ta-ziji*, *ziji*-*ta-ziji* and *ta-ziji*-*ziji*. For the identity variable, *ziji*-*ziji*, *ta-ziji*-*ta-ziji* are marked as yes and *ziji*-*ta-ziji* and *ta-ziji*-*ziji* are marked as no. For the blocking parameter, *ziji*-*ziji*, *ta-ziji*-*ta-ziji*and *ta-ziji*-*ziji* are marked as yes while *ziji*-*ta-ziji* is marked as no. 
 
 
 ## The acceptability rating task
 
 
-This experiment was an acceptability rating task administered online using XX, a data collecting website. Sentence items were presented one at a time which participants rated on a scale from 1 (very bad) to 7 (very good) intuitively as a formal measure
-of linguistic acceptability. The Likert scales have been widely used in psychological research (Likert 1932; Hartley 2014) as well as judgment replication studies. Participants were required to judge the acceptability of 20 sentences: 8 practice sentences and 12 non-practice sentences (8 fillers, 4 experimental). A one-minute break was placed after the first ten sentences are rated. The practice sentences served to familiarize subjects with the task and 7-point rating system. The order of items presented in the experiment was randomized.
-
+This experiment was an acceptability rating task administered online using XXX, a data collecting website. Sentence items were presented one at a time which participants rated on a scale from 1 (very bad) to 7 (very good) intuitively as a formal measure of linguistic acceptability. These Likert scales have been widely used in psychological research (Likert 1932; Hartley 2014) as well as judgment replication studies. Participants were required to judge the acceptability of 20 sentences: 8 practice sentences and 12 non-practice sentences (8 fillers, 4 experimental). A one-minute break was placed after the first ten sentences were rated. The practice sentences served to familiarize subjects with the task and 7-point rating system. The order of items presented in the experiment was randomized.
 
 
 
@@ -72,17 +70,17 @@ of linguistic acceptability. The Likert scales have been widely used in psycholo
 
 ## Data summary
 
-We obtained 400 observations in total from 100 participants and each participant rated on each of the four test sentences. The sentence of four combinations *ziji*-*ta-ziji*, *ta-ziji*-*ziji*, *ziji*-*ziji* and *ta-ziji*-*ta-ziji* were marked as "s1","s2","s3" and "s4" respectively in the raw data and their identity and blocking properties were added to the data frame after the experiment (a part of data cleaning). The tidy dataframe is shown below. The participant from S001 to S050 are northern Chinese speakers and the participant from S051-S100 are southern Chinese speakers. 
+We obtained 400 observations in total from 100 participants and each participant rated on four test sentences. The sentence of four combinations *ziji*-*ta-ziji*, *ta-ziji*-*ziji*, *ziji*-*ziji* and *ta-ziji*-*ta-ziji* were marked as "s1","s2","s3" and "s4" respectively in the raw data and their identity and blocking properties were added to the data frame after the experiment (a part of data cleaning). The data frame for analysis is shown below. The participant from S001 to S050 are northern Mandarin speakers and the participant from S051-S100 are Mandarin Chinese speakers. 
 
 ```{r, 'df', echo=F,warnings=F, message=F, table.align='center'}
 library("tidyverse")
 library(kableExtra)
 df_tidy<- read.csv("~/Desktop/finalds4ling/Data_tidy_raw/data_tidy1.csv")
-knitr::kable(head(df_tidy), caption = 'Table 1') %>%
+knitr::kable(head(df_tidy)) %>%
   kable_styling(bootstrap_options = "striped", full_width = F)
 ```
 ## Descriptive statistics
-The descriptive statistics of acceptability ratings (mean, standard deviation(SD) and the number of ovservations) for the four sentences are shown in the table below. The acceptability ratings on blocking, Identity and dialectual background are presented in Fig.1, Fig.2 and Fig.3 respectively.
+The descriptive statistics of acceptability ratings (mean, standard deviation(SD) and the number of observations) for the four sentences are given in the table below. The acceptability ratings with respect to blocking, identity and dialectual background are presented in Fig.1, Fig.2 and Fig.3 respectively.
 ```{r, 'sum', echo=F,warnings=F, message=F, fig.cap= 'The data frame'}
 d1 <- df_tidy %>%
    group_by(Blocking) %>%
@@ -102,7 +100,7 @@ d3 <- df_tidy %>%
 knitr::kable(list(d1, d2, d3)) %>%
   kable_styling(bootstrap_options = "striped", full_width = F)
 ```
-The overall pattern suggests that the sentences without blocking (mean = 4.69; SD = 2.03) have higher scores than the sentences with blocking (mean = 3.38; SD = 2.21); the sentences with identical reflexives (mean = 5.07; SD = 1.91) have higher scores than the sentences with different reflexives (mean = 3.66; SD = 2.15); the acceptability rating of the sentences in question is lower for northern Mandarin speakers (mean = 2.58; SD = 1.33) than southern Mandarin speakers (mean = 6.16; SD = 1.04). 
+The overall pattern suggest that the sentences without blocking (mean = 4.69; SD = 2.03) have higher scores than the sentences with blocking (mean = 3.38; SD = 2.21); the sentences with identical reflexives (mean = 5.07; SD = 1.91) have higher scores than the sentences with different reflexives (mean = 3.66; SD = 2.15); the acceptability rating of the sentences in question is lower for northern Mandarin speakers (mean = 2.58; SD = 1.33) than southern Mandarin speakers (mean = 6.16; SD = 1.04). 
 ```{r, 'plot11', echo=F,warnings=F, message=F,fig.width = 4, fig.height=3,fig.align='center', fig.cap= 'The ratings of blocking and non-blocking sentences'}
 library("tidyverse")
    df_tidy %>%
@@ -130,9 +128,9 @@ df_tidy %>%
   labs(x = "Dialectual background", y = "Ratings") +
   theme_grey(base_family = "Times", base_size = 10)
 ```
-The ratings by individuals are presened in Fig 4. The participants S001-S050, who are northern Mandarin speakers (the left side of the table) have lower ratings on every sentence with two reflexives than the participants S051-S100, who are southern Mandarin speakers (the right side of the table).
+The ratings by individuals are presented in Fig 4. The participants S001-S050, who are northern Mandarin speakers (the left side of the table) have lower ratings in general than the participants S051-S100, who are southern Mandarin speakers (the right side of the table).
 
-```{r, 'plot14', echo=F,warnings=F, message=F,fig.width = 4.5, fig.height=4, fig.cap = 'Individual Ratings from northern and northern participants', fig.align='center'}
+```{r, 'plot14', echo=F,warnings=F, message=F,fig.width = 4.5, fig.height=4, fig.cap = 'Individual Ratings from northern and southern participants', fig.align='center'}
 df_tidy %>%
   ggplot(aes(x = id, y = rating, fill = id)) +
   geom_boxplot() +
@@ -144,9 +142,10 @@ df_tidy %>%
 
 ## Cumulative link mixed model
 
-Due to the ordinal nature of the outcome variable, this study used cumulative link mixed model (CLMM) to analyze the rating score data, and experiment-wise alpha was set at 0.05. The categorical fixed effect group was dummy coded with no (for Identity), yes (for Identity) and northern speaker (for dialectual background) set as the baseline. The random effects structure only included by-subject random intercepts because the predictors are independent from each other. A total of five models are fitted : fm1 (only including intercept), fm2 (including the predicter Blocking), fm3 (including the predicter Blocking and Identity), fm4 (including the predicter Blocking, Identity and dialectual background) and fm5 (including the predicter Blocking, Identity and dialectual background as fixed effects and the ramdon effects of subject). The comparison of these five models are given below. We are not confident enough to conclude that the random effect of participants does not show a main effect in this study (p = 0.2573 > 0.05).
+Due to the ordinal nature of the outcome variable, this study used cumulative link mixed model (CLMM) to analyze the rating score data, and experiment-wise alpha was set at 0.05. The categorical fixed effect group was dummy coded with no (for Blocking), yes (for Identity) and northern speaker (for dialectual background) set as the baseline. The random effects structure only included by-subject random intercepts because the predictors are independent from each other. A total of five models were fitted: fm1 (only including intercept), fm2 (including the predictor Blocking), fm3 (including the predictor Blocking and Identity), fm4 (including the predictor Blocking, Identity and dialectual background) and fm5 (including the predictor Blocking, Identity and dialectual background as fixed effects and the random effects of subject). The comparison of these five models are given below. 
 
 ```{r, 'regression', echo=F,warnings=F, message=F}
+options(scipen = 1, digits = 3)
 library("ordinal")
 fm1 <- clm(as.factor(rating) ~ 1, data = df_tidy)
 fm2 <- clm(as.factor(rating) ~ Blocking, data = df_tidy)
@@ -156,10 +155,11 @@ fm5 <- clmm(as.factor(rating) ~ Blocking + Identity + dia + (1|id), data = df_ti
 knitr::kable(anova(fm1,fm2,fm3,fm4,fm5))
 ```
 
-As a result, the model containing Blocking, Identity and dialectual background (fm4) had the lowest AIC value (1485.6232) and thus provided the best fit of the data as shown in the table below. Blocking (z = -4.182, p < 0.001), Identity (z = 8.951, p < 0.001) and dialectual background (z = 16.760, p < 0.001) all have main effects on the final rating scores.  
+As a result, the model containing Blocking, Identity and dialectual background (fm4) had the lowest AIC value (1486) and thus provided the best fit of the data as shown in the table below. Blocking (z = -4.18, p < 0.001), Identity (z = 8.95, p < 0.001) and dialectual background (z = 16.76, p < 0.001) all have main effects on the final rating scores. Given the data from fm5, we are not confident enough to conclude that the random effect of participants show a main effect in this study (p = 0.257 > 0.05).
 
 
 ```{r, 'regression1', echo=F,warnings=F, message=F}
+options(scipen = 1, digits = 3)
 library(broom)
 tidy(fm4) %>%
   knitr::kable()

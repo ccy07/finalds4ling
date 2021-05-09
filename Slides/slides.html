@@ -4,7 +4,7 @@
     <title>The acceptability of two reflexives in one clause: identity, blocking and dialectual variations</title>
     <meta charset="utf-8" />
     <meta name="author" content="Chaoyi Chen" />
-    <meta name="date" content="2021-04-28" />
+    <meta name="date" content="2021-05-09" />
     <script src="libs/header-attrs-2.7/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/hygge.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/rutgers.css" rel="stylesheet" />
@@ -17,7 +17,7 @@ class: center, middle, inverse, title-slide
 # The acceptability of two reflexives in one clause: identity, blocking and dialectual variations
 ### Chaoyi Chen
 ### Rutgers University
-### 2021-04-28
+### 2021-05-09
 
 ---
 
@@ -76,7 +76,7 @@ class: center, middle, inverse, title-slide
 
 
 ```
-##     id dia sentence rating Blocking Identidy
+##     id dia sentence rating Blocking Identity
 ## 1 S001 nor       s1      1      yes       no
 ## 2 S001 nor       s2      1       no       no
 ## 3 S001 nor       s3      4       no      yes
@@ -105,7 +105,7 @@ class: center, middle, inverse, title-slide
 
 ```
 ## # A tibble: 2 x 2
-##   Identidy mean_rating
+##   Identity mean_rating
 ##   &lt;chr&gt;          &lt;dbl&gt;
 ## 1 no              3.66
 ## 2 yes             5.07
@@ -134,9 +134,9 @@ class: center, middle, inverse, title-slide
 library("ordinal")
 fm1 &lt;- clm(as.factor(rating) ~ 1, data = df_tidy)
 fm2 &lt;- clm(as.factor(rating) ~ Blocking, data = df_tidy)
-fm3 &lt;- clm(as.factor(rating) ~ Blocking + Identidy , data = df_tidy)
-fm4 &lt;- clm(as.factor(rating) ~ Blocking + Identidy + dia, data = df_tidy)
-fm5 &lt;- clmm(as.factor(rating) ~ Blocking + Identidy + dia + (1|id), data = df_tidy)
+fm3 &lt;- clm(as.factor(rating) ~ Blocking + Identity , data = df_tidy)
+fm4 &lt;- clm(as.factor(rating) ~ Blocking + Identity + dia, data = df_tidy)
+fm5 &lt;- clmm(as.factor(rating) ~ Blocking + Identity + dia + (1|id), data = df_tidy)
 anova(fm1,fm2,fm3,fm4,fm5)
 ```
 
@@ -146,9 +146,9 @@ anova(fm1,fm2,fm3,fm4,fm5)
 ##     formula:                                                 link: threshold:
 ## fm1 as.factor(rating) ~ 1                                    logit flexible  
 ## fm2 as.factor(rating) ~ Blocking                             logit flexible  
-## fm3 as.factor(rating) ~ Blocking + Identidy                  logit flexible  
-## fm4 as.factor(rating) ~ Blocking + Identidy + dia            logit flexible  
-## fm5 as.factor(rating) ~ Blocking + Identidy + dia + (1 | id) logit flexible  
+## fm3 as.factor(rating) ~ Blocking + Identity                  logit flexible  
+## fm4 as.factor(rating) ~ Blocking + Identity + dia            logit flexible  
+## fm5 as.factor(rating) ~ Blocking + Identity + dia + (1 | id) logit flexible  
 ## 
 ##     no.par     AIC  logLik  LR.stat df Pr(&gt;Chisq)    
 ## fm1      6 1535.08 -761.54                           
